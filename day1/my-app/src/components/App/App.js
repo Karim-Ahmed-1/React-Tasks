@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./App.css"
 import Card from '../Card/Card';
 import Filter from '../Filter/Filter';
+import Modal from '../Modal/Modal';
 
 
 
@@ -68,6 +69,9 @@ const App = () => {
   }
   return (
     <div >
+        <div className='mt-16 ml-10'>
+          <Modal />
+        </div>
         <Filter filteration={filterNames}/>
         <Card list={namesHandler()} seeDetails={seeDetailsHandler}/>
     </div>
