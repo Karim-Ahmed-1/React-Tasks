@@ -61,7 +61,8 @@ const App = () => {
   const namesHandler=()=>{
     if(filter.length!==0)
     {
-      return state.filter((el)=>el.name.includes(filter))
+      console.log(filter.toUpperCase())
+      return state.filter((el)=>el.name.toLowerCase().includes(filter.toLowerCase()))
     }
     return state;
   }
